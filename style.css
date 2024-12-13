@@ -1,0 +1,271 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-fam);
+  background-color: var(--light-color);
+  margin: auto;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/**************
+ variables 
+ ****************/
+
+:root {
+  --dark-color: rgb(7, 25, 82);
+  --dark-color-opacity: rgb(7, 25, 82, 0.2);
+  --second-color: rgb(8, 131, 149);
+  --main-color: rgb(55, 183, 195);
+  --light-color: rgb(235, 244, 246);
+  --light-color-opacity: rgb(235, 244, 246, 0.6);
+  --white-color: rgb(255, 255, 255);
+  --white-color-opacity: rgb(255, 255, 255, 0.5);
+  --font-fam: Poppins;
+  --padding-button: 0.5em;
+  --border-radius: 2em;
+}
+
+nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+header {
+  width: 100%;
+  padding: 1rem;
+  position: fixed;
+}
+
+nav {
+  background-color: var(--white-color-opacity);
+  padding: 1em;
+  border-radius: var(--border-radius);
+  box-shadow: 2px 1px 6px var(--dark-color-opacity);
+}
+
+/****************
+ First short presentaion section 
+ ****************/
+
+#form-1 {
+  position: absolute;
+  transform: rotate(180deg);
+  width: 100%;
+  top: 0;
+  right: 0;
+}
+
+#form-2{
+    position: absolute;
+    width: 25%;
+    bottom: 14%;
+    rotate: 315deg;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  gap: 2em;
+  max-width: 600px;
+  height: 80vh;
+}
+
+#contact {
+  background-color: var(--main-color);
+  color: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+  width: 40%;
+}
+
+#project{
+  background-color: var(--dark-color);
+  color: var(--white-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+  width: 40%;
+}
+
+.action {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+/***************
+ small banner my skills
+ *************** */
+
+.container-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  background-color: var(--white-color-opacity);
+  height: 15vh;
+  border-radius: var(--border-radius);
+  /* mise en place du logo en arriere plan */
+  position: relative;
+  z-index: 1;
+    /* hiiden pour l'animation */
+  /* overflow: hidden; */
+  box-shadow: 2px 1px 6px var(--dark-color-opacity);
+
+
+}
+
+
+.wrapper1 {
+  display: flex;
+  width: 100%;
+  gap: 0.6em;
+  z-index: 1;
+  animation-name: tansitionInfinit1;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform: translateX(100%);
+}
+
+
+.wrapper2{
+    display: flex;
+    width: 100%;
+    gap: 0.6em;
+    z-index: 4;
+    animation-name: tansitionInfinit2;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    transform: translateX(200%);
+    position: absolute;
+}
+
+
+.container-2 ul li {
+  background-color: var(--light-color);
+  border-radius: var(--border-radius);
+  padding: var(--padding-button);
+  text-align: center;
+  width: 100%;
+  
+
+}
+
+@keyframes tansitionInfinit1 {
+    0%{transform: translateX(100%);
+    }
+    
+    100%{transform: translateX(-100%);
+    }
+}
+@keyframes tansitionInfinit2 {
+    0%{transform: translateX(200%);
+    }
+    
+    100%{transform: translateX(-100%);
+    }
+}
+
+
+/*************** 
+Griid project ou inspirations
+*****************/
+
+
+
+.grid-project {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.container-4 {
+  margin-top: 10%;
+}
+
+.container-4 > h2 {
+  grid-column: span 4;
+  align-self: end;
+  text-align: center;
+}
+
+.card-project {
+  background: var(--dark-color);
+  width: 100%;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carre-blanc{
+    width: 80%;
+    height: 80%;
+    background-color: var(--light-color-opacity);
+    border-radius: var(--border-radius);
+}
+
+/* **********
+ Love or hate this effect 
+ ********** */
+
+#effect{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--main-color);
+    border-radius: var(--border-radius);
+}
+
+.container-effect{
+    padding: 3rem;
+}
+
+
+
+/************* 
+foooteeeer
+*************** */
+
+footer{
+    height: 30vh;
+    width: 100%;
+    background-color: var(--white-color-opacity);
+    border-radius: var(--border-radius);
+}
+
+
+.footer-social{
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+}
