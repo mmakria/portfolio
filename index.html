@@ -3,40 +3,102 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mon Portfolio</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="mouseFollow"></div>
     <!-- Header/navigation -->
+
     <header>
       <nav>
         <div id="say-hi-nav">
-          <p>Say "Hi"</p>
-          <img src="./ressources/handicon.svg" alt="hand saying hi" />
+          <a href="./contact.html">
+            <p>Say "Hi"</p>
+            <img src="./ressources/handicon.svg" alt="hand saying hi" />
+          </a>
         </div>
         <ul>
-          <li>Services</li>
-          <li>Projects</li>
-          <li>News</li>
+          <li><a href="">Services</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="">News</a></li>
         </ul>
       </nav>
     </header>
     <!-- Main -->
+
     <main>
       <section class="container container-1">
-        <h1>Bringing Ideas to Life.</h1>
-        <div>
-          <article><h2>Design</h2></article>
-          <article><h2>Build</h2></article>
-          <article><h2>Enhance</h2></article>
+        <h1 class="from-right">Bringing Ideas to Life.</h1>
+        <div class="card-container-1">
+          <article class="article1">
+            <h2>Design</h2>
+            <p>
+              Transformez vos idées en designs captivants et fonctionnels qui
+              répondent à vos objectifs.
+            </p>
+          </article>
+          <article class="article2">
+            <h2>Build</h2>
+            <p>
+              Construisez des solutions robustes et évolutives qui transforment
+              votre vision en réalité.
+            </p>
+          </article>
+          <article class="article3">
+            <h2>Enhance</h2>
+            <p>
+              Optimisez et améliorez vos projets existants grâce à une analyse
+              approfondie et des mises à jour stratégiques. Faites évoluer vos
+              solutions pour qu’elles restent performantes et pertinentes dans
+              un monde en constante évolution.
+            </p>
+          </article>
         </div>
       </section>
-      <section class="container container-2"></section>
-      <section class="container container-3"></section>
+
+      <section class="container container-2">
+        <article>
+          <h2>Création de Sites Web sur Mesures</h2>
+          <p>
+            Je conçois des sites web modernes, performants et adaptés à vos
+            besoins. Mon objectif : créer une présence en ligne qui attire vos
+            prospects, valorise votre marque et soutient votre croissance.
+            Transformons ensemble votre vision en un site qui fait la différence
+            !
+          </p>
+        </article>
+        <figure>
+          <img id="screen-laptop" src="./ressources/laptop-apple.svg" alt="" />
+        </figure>
+      </section>
+      <section class="container container-3">
+        <h2>My Crafts</h2>
+        <div class="grid-projects">
+          <article class="projects project-1">
+            <h3>Drillz</h3>
+            <a href="En cours">En cours</a>
+          </article>
+          <article class="projects project-2">
+            <h3>NextStop</h3>
+            <a href="En cours">En cours</a>
+          </article>
+          <article class="projects project-3">
+            <h3>CleanUp</h3>
+            <a href="En cours">En cours</a>
+          </article>
+          <article class="projects project-4">
+            <h3>Affutexpress</h3>
+            <a href="En cours">En cours</a>
+          </article>
+        </div>
+      </section>
       <section class="container container-4">
         <div>
           <h2>My Stack</h2>
@@ -84,10 +146,42 @@
           </ul>
         </div>
       </section>
+
+      <section>
+        <h2>Whoami</h2>
+        <figure><img src="" alt="" /></figure>
+      </section>
     </main>
 
     <footer>
-      kjh
+      <h2>Ask me anything</h2>
+      <form action="">
+        <div>
+          <label for="name-contact">Your name</label>
+          <input type="text" name="" id="name-contact" />
+        </div>
+
+        <div>
+          <label for="mail">Your mail</label>
+          <input type="email" name="mail" id="mail" />
+        </div>
+
+        <div>
+          <label for="message">Your message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+      </form>
+
+      <div class="social-item">
+        <img src="./ressources/social network/instagram.svg" alt="" />
+        <img src="./ressources/social network/twitter.svg" alt="" />
+        <img src="./ressources/social network/linkedin.svg" alt="" />
+        <img src="" alt="" />
+      </div>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
