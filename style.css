@@ -83,6 +83,7 @@ body {
   background-image: url(./ressources/background.svg);
   background-size: cover;
   background-repeat: no-repeat;
+  overflow-x: hidden; /* Empêche les débordements horizontaux */
 }
 
 #mouseFollow {
@@ -220,15 +221,9 @@ nav ul li:hover {
 
 h1 {
   font-size: var(--font-size-h1);
-  opacity: 0;
-  transform: translateX(25%);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-h1.active {
-  opacity: 1;
-  transform: translateX(0%);
-}
+
 h2 {
   font-size: var(--font-size-h2);
 }
@@ -385,17 +380,4 @@ textarea {
   flex-direction: column; */
   display: block;
 }
-
-/* Animation on scroll */
-
-.container {
-  opacity: 0;
-  transition: opacity 1s ease-out, transform 0.8s ease-out;
-}
-
-.container.fader {
-  opacity: 1;
-  transform: translateY(-10%);
-}
-
 

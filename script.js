@@ -11,58 +11,40 @@ document.addEventListener("mousemove", function (e) {
 
 const title = document.querySelector("h1");
 
-setTimeout(() => {
-  title.classList.add("active");
-}, 300);
 
-window.onscroll = () => {};
-
-// window.addEventListener("scroll", () => {
-//   console.log(window.scrollY);
-
-//   if (window.scrollY >= 200) {
-//     document.querySelector(".container-2").classList.add("active");
-//   } else {
-//     document.querySelector(".container-2").classList.remove("active");
-//   }
-// });
-
-// window.addEventListener("scroll", () => {
-//   if (window.scrollY >= 50) {
-//     // Vérifie si scrollY est supérieur ou égal à 50
-//     document.querySelector(".container-2").classList.add("active");
-//   }else
-//   document.querySelector(".container-2").classList.remove("active");
-// });
-
-const sections = document.querySelectorAll(".container");
-const appearRight = document.querySelectorAll(".appear-right");
-const appearLeft = document.querySelectorAll(".appear-left");
-
-const fadeInOptions = {
-  rootMargin: "-35%",
-};
+// Gsap test
 
 
-const fadeInOnscroll = new IntersectionObserver(function (entries) {
-  entries.forEach((entry) => {
-    entry.target.classList.toggle("fader", entry.isIntersecting);
-    if (entry.isIntersecting) {
-      fadeInOnscroll.unobserve(entry.target);
-    }
-  });
-}, fadeInOptions);
 
-sections.forEach((section) => {
-  fadeInOnscroll.observe(section);
+
+gsap.from(".card-container-1", {
+  x: "-50%",
+  duration: 1,
 });
 
 
+gsap.from("h1", {
+  x: "50%",
+  duration: 1,
+})
+gsap.from("#screen-laptop", {
+  scrollTrigger:{
+    trigger: "#screen-laptop",
+    start: "top center",
+    markers: true,
 
-
-
-
-
-
-
-// Gsap test
+  }, 
+  x: "50%",
+  duration: 1,
+  
+  
+})
+gsap.from(".container-2-text", {
+  scrollTrigger:{
+    trigger: "#screen-laptop",
+    start: "top 80%",
+  }, 
+  x: "-50%",
+  duration: 1,
+  
+})
